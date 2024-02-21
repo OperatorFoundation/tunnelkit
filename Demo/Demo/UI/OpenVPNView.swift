@@ -34,11 +34,11 @@ struct OpenVPNView: View {
 
     let keychain: Keychain
 
-    @State private var server = "nl-free-50"
+    @State private var server = "operator"
 
-    @State private var domain = "protonvpn.net"
+    @State private var domain = "137.184.9.120"
 
-    @State private var portText = "80"
+    @State private var portText = "1194"
 
     @State private var username = ""
 
