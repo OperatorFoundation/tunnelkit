@@ -10,7 +10,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>$(TeamIdentifierPrefix)group.com.algoritmico.TunnelKit.Demo</string>
+		<string>$(TeamIdentifierPrefix)</string>
 	</array>
 	<key>com.apple.security.network.client</key>
 	<true/>
@@ -18,7 +18,7 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)group.com.algoritmico.TunnelKit.Demo</string>
+		<string>$(AppIdentifierPrefix)group.org.operatorfoundation.TunnelKit.Demo</string>
 	</array>
 </dict>
 </plist>

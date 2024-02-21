@@ -539,7 +539,6 @@
 				0E05416725A232FD00EFC5FF /* Resources */,
 				0E0541AD25A2343500EFC5FF /* Embed Foundation Extensions */,
 				0E05438525A240E400EFC5FF /* Embed Frameworks */,
-				0EB5A56B29F1C9C8005313B3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -585,7 +584,6 @@
 				0E05422A25A236EB00EFC5FF /* Resources */,
 				0E05428425A239C600EFC5FF /* Embed Foundation Extensions */,
 				0E05438825A240E900EFC5FF /* Embed Frameworks */,
-				0EB5A56A29F1C8FC005313B3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -713,7 +711,6 @@
 				0ED1A5E72B2A6AE400A0EA90 /* Frameworks */,
 				0ED1A5E82B2A6AE400A0EA90 /* Resources */,
 				0E0CBA832B2DE79A008F1446 /* Embed Foundation Extensions */,
-				0E0CBA842B2DE948008F1446 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -738,12 +735,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Davide De Rosa";
 				TargetAttributes = {
 					0E05416825A232FD00EFC5FF = {
 						CreatedOnToolsVersion = 12.3;
-						ProvisioningStyle = Automatic;
 					};
 					0E05419E25A2343500EFC5FF = {
 						CreatedOnToolsVersion = 12.3;
@@ -875,63 +871,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0E0CBA842B2DE948008F1446 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "PATH=\"/opt/homebrew/bin:${PATH}\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		0EB5A56A29F1C8FC005313B3 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "PATH=\"/opt/homebrew/bin:${PATH}\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		0EB5A56B29F1C9C8005313B3 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "PATH=\"/opt/homebrew/bin:${PATH}\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E05416525A232FD00EFC5FF /* Sources */ = {
@@ -1090,8 +1029,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = Demo/iOS/Demo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1099,8 +1039,9 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algoritmico.ios.TunnelKit.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.ios.TunnelKit.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1113,14 +1054,14 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = Demo/iOS/Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algoritmico.ios.TunnelKit.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.ios.TunnelKit.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1132,7 +1073,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = Demo/iOS/DemoTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1142,7 +1083,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.ios.TunnelKit.Demo.OpenVPN-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.ios.TunnelKit.Demo.OpenVPN-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1155,7 +1096,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = Demo/iOS/DemoTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1164,7 +1105,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.ios.TunnelKit.Demo.OpenVPN-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.ios.TunnelKit.Demo.OpenVPN-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1182,7 +1123,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1190,7 +1131,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algoritmico.macos.TunnelKit.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.macos.TunnelKit.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
@@ -1209,14 +1150,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algoritmico.macos.TunnelKit.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.macos.TunnelKit.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
@@ -1232,7 +1173,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1243,7 +1184,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.macos.TunnelKit.Demo.OpenVPN-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.macos.TunnelKit.Demo.OpenVPN-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1258,7 +1199,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1268,7 +1209,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.macos.TunnelKit.Demo.OpenVPN-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.macos.TunnelKit.Demo.OpenVPN-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1314,6 +1255,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1384,6 +1326,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1437,7 +1380,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = Demo/iOS/DemoTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1447,7 +1390,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.ios.TunnelKit.Demo.WireGuard-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.ios.TunnelKit.Demo.WireGuard-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1465,7 +1408,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = Demo/iOS/DemoTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1474,7 +1417,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.ios.TunnelKit.Demo.WireGuard-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.ios.TunnelKit.Demo.WireGuard-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1493,7 +1436,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1504,7 +1447,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.macos.TunnelKit.Demo.WireGuard-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.macos.TunnelKit.Demo.WireGuard-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1524,7 +1467,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1534,7 +1477,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.macos.TunnelKit.Demo.WireGuard-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.macos.TunnelKit.Demo.WireGuard-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1571,7 +1514,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1597,7 +1540,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1624,7 +1567,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1635,7 +1578,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.tvos.TunnelKit.Demo.WireGuard-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.TunnelKit.Demo.WireGuard-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1655,7 +1598,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/DemoTunnel.plist;
@@ -1665,7 +1608,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algoritmico.tvos.TunnelKit.Demo.WireGuard-Tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.operatorfoundation.TunnelKit.Demo.WireGuard-Tunnel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1685,7 +1628,7 @@
 				CODE_SIGN_ENTITLEMENTS = Demo/tvOS/Demo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1697,7 +1640,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algoritmico.tvos.TunnelKit.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.tvos.TunnelKit.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1719,7 +1662,7 @@
 				CODE_SIGN_ENTITLEMENTS = Demo/tvOS/Demo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DTDYD63ZX9;
+				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1730,7 +1673,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algoritmico.tvos.TunnelKit.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.tvos.TunnelKit.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;

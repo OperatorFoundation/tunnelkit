@@ -29,79 +29,59 @@ import TunnelKitOpenVPN
 import TunnelKitWireGuard
 
 #if os(macOS)
-let appGroup = "DTDYD63ZX9.group.com.algoritmico.TunnelKit.Demo"
+let appGroup = "67Y4NSLDQ3.group.org.operatorfoundation.TunnelKit.Demo"
 private let bundleComponent = "macos"
 #elseif os(iOS)
-let appGroup = "group.com.algoritmico.TunnelKit.Demo"
+let appGroup = "group.org.operatorfoundation.TunnelKit.Demo"
 private let bundleComponent = "ios"
 #else
-let appGroup = "group.com.algoritmico.TunnelKit.Demo"
+let appGroup = "group.org.operatorfoundation.TunnelKit.Demo"
 private let bundleComponent = "tvos"
 #endif
 
 enum TunnelIdentifier {
-    static let openVPN = "com.algoritmico.\(bundleComponent).TunnelKit.Demo.OpenVPN-Tunnel"
+    static let openVPN = "org.operatorfoundation.\(bundleComponent).TunnelKit.Demo.OpenVPN-Tunnel"
 
-    static let wireGuard = "com.algoritmico.\(bundleComponent).TunnelKit.Demo.WireGuard-Tunnel"
+    static let wireGuard = "org.operatorfoundation.\(bundleComponent).TunnelKit.Demo.WireGuard-Tunnel"
 }
 
 extension OpenVPN {
     struct DemoConfiguration {
         static let ca = OpenVPN.CryptoContainer(pem: """
 -----BEGIN CERTIFICATE-----
-MIIFozCCA4ugAwIBAgIBATANBgkqhkiG9w0BAQ0FADBAMQswCQYDVQQGEwJDSDEV
-MBMGA1UEChMMUHJvdG9uVlBOIEFHMRowGAYDVQQDExFQcm90b25WUE4gUm9vdCBD
-QTAeFw0xNzAyMTUxNDM4MDBaFw0yNzAyMTUxNDM4MDBaMEAxCzAJBgNVBAYTAkNI
-MRUwEwYDVQQKEwxQcm90b25WUE4gQUcxGjAYBgNVBAMTEVByb3RvblZQTiBSb290
-IENBMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt+BsSsZg7+AuqTq7
-vDbPzfygtl9f8fLJqO4amsyOXlI7pquL5IsEZhpWyJIIvYybqS4s1/T7BbvHPLVE
-wlrq8A5DBIXcfuXrBbKoYkmpICGc2u1KYVGOZ9A+PH9z4Tr6OXFfXRnsbZToie8t
-2Xjv/dZDdUDAqeW89I/mXg3k5x08m2nfGCQDm4gCanN1r5MT7ge56z0MkY3FFGCO
-qRwspIEUzu1ZqGSTkG1eQiOYIrdOF5cc7n2APyvBIcfvp/W3cpTOEmEBJ7/14RnX
-nHo0fcx61Inx/6ZxzKkW8BMdGGQF3tF6u2M0FjVN0lLH9S0ul1TgoOS56yEJ34hr
-JSRTqHuar3t/xdCbKFZjyXFZFNsXVvgJu34CNLrHHTGJj9jiUfFnxWQYMo9UNUd4
-a3PPG1HnbG7LAjlvj5JlJ5aqO5gshdnqb9uIQeR2CdzcCJgklwRGCyDT1pm7eoiv
-WV19YBd81vKulLzgPavu3kRRe83yl29It2hwQ9FMs5w6ZV/X6ciTKo3etkX9nBD9
-ZzJPsGQsBUy7CzO1jK4W01+u3ItmQS+1s4xtcFxdFY8o/q1zoqBlxpe5MQIWN6Qa
-lryiET74gMHE/S5WrPlsq/gehxsdgc6GDUXG4dk8vn6OUMa6wb5wRO3VXGEc67IY
-m4mDFTYiPvLaFOxtndlUWuCruKcCAwEAAaOBpzCBpDAMBgNVHRMEBTADAQH/MB0G
-A1UdDgQWBBSDkIaYhLVZTwyLNTetNB2qV0gkVDBoBgNVHSMEYTBfgBSDkIaYhLVZ
-TwyLNTetNB2qV0gkVKFEpEIwQDELMAkGA1UEBhMCQ0gxFTATBgNVBAoTDFByb3Rv
-blZQTiBBRzEaMBgGA1UEAxMRUHJvdG9uVlBOIFJvb3QgQ0GCAQEwCwYDVR0PBAQD
-AgEGMA0GCSqGSIb3DQEBDQUAA4ICAQCYr7LpvnfZXBCxVIVc2ea1fjxQ6vkTj0zM
-htFs3qfeXpMRf+g1NAh4vv1UIwLsczilMt87SjpJ25pZPyS3O+/VlI9ceZMvtGXd
-MGfXhTDp//zRoL1cbzSHee9tQlmEm1tKFxB0wfWd/inGRjZxpJCTQh8oc7CTziHZ
-ufS+Jkfpc4Rasr31fl7mHhJahF1j/ka/OOWmFbiHBNjzmNWPQInJm+0ygFqij5qs
-51OEvubR8yh5Mdq4TNuWhFuTxpqoJ87VKaSOx/Aefca44Etwcj4gHb7LThidw/ky
-zysZiWjyrbfX/31RX7QanKiMk2RDtgZaWi/lMfsl5O+6E2lJ1vo4xv9pW8225B5X
-eAeXHCfjV/vrrCFqeCprNF6a3Tn/LX6VNy3jbeC+167QagBOaoDA01XPOx7Odhsb
-Gd7cJ5VkgyycZgLnT9zrChgwjx59JQosFEG1DsaAgHfpEl/N3YPJh68N7fwN41Cj
-zsk39v6iZdfuet/sP7oiP5/gLmA/CIPNhdIYxaojbLjFPkftVjVPn49RqwqzJJPR
-N8BOyb94yhQ7KO4F3IcLT/y/dsWitY0ZH4lCnAVV/v2YjWAWS3OWyC8BFx/Jmc3W
-DK/yPwECUcPgHIeXiRjHnJt0Zcm23O2Q3RphpU+1SO3XixsXpOVOYP6rJIXW9bMZ
-A1gTTlpi7A==
+MIIB+zCCAYKgAwIBAgIUbUY2OgOE0mRUmQJHBArHOb+gs00wCgYIKoZIzj0EAwQw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjMxMTMwMDAxNjM2WhcNMzMxMTI3
+MDAxNjM2WjAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQTB2MBAGByqGSM49AgEGBSuB
+BAAiA2IABORLqJENSIREI4AWlymdGd47qultm9p7OWbrLqjLQqLfyn9DUoTQwwrO
+DR6tsVPZg/wgk/lsiR2mklULcXRdRfGU9SYcuSdnv/MeZi+md7wBbCo3WviqIzdd
+kcAWdfbu6KOBkDCBjTAdBgNVHQ4EFgQUhxWhtR4M7ph/YohOBz79PSeTt5UwUQYD
+VR0jBEowSIAUhxWhtR4M7ph/YohOBz79PSeTt5WhGqQYMBYxFDASBgNVBAMMC0Vh
+c3ktUlNBIENBghRtRjY6A4TSZFSZAkcECsc5v6CzTTAMBgNVHRMEBTADAQH/MAsG
+A1UdDwQEAwIBBjAKBggqhkjOPQQDBANnADBkAjBnXN3yN5Fx/fT0zKIigmwgYDAZ
+YDORij7Ez4H//xgRMPk7sbqbcDGjcgvlT6bzeKgCMEMLabceFTqd9PwRkIHWYKYX
+Nwm0ENHsezJpISREWcXWjp57LN5jCSpuh1Kl81P5MQ==
 -----END CERTIFICATE-----
 """)
 
         static let tlsKey = OpenVPN.StaticKey(file: """
 # 2048 bit OpenVPN static key
 -----BEGIN OpenVPN Static key V1-----
-6acef03f62675b4b1bbd03e53b187727
-423cea742242106cb2916a8a4c829756
-3d22c7e5cef430b1103c6f66eb1fc5b3
-75a672f158e2e2e936c3faa48b035a6d
-e17beaac23b5f03b10b868d53d03521d
-8ba115059da777a60cbfd7b2c9c57472
-78a15b8f6e68a3ef7fd583ec9f398c8b
-d4735dab40cbd1e3c62a822e97489186
-c30a0b48c7c38ea32ceb056d3fa5a710
-e10ccc7a0ddb363b08c3d2777a3395e1
-0c0b6080f56309192ab5aacd4b45f55d
-a61fc77af39bd81a19218a79762c3386
-2df55785075f37d8c71dc8a42097ee43
-344739a0dd48d03025b0450cf1fb5e8c
-aeb893d9a96d1f15519bb3c4dcb40ee3
-16672ea16c012664f8a9f11255518deb
+557bc54a91fc624026b02be474c4949d
+7e4475d89519f148c258e0ca0830433f
+75d068c9cd47f84a268c1abfd0c3ffa4
+84e8c1d77c5aa0a186d0c9900be54a60
+35e86ec6a14b54c929f3c621ef0263f9
+8bd15ca6f32e958013fed26e53f33cf3
+09249a1a55f1b54d2e00ad2a95cde7c1
+239799d7cb655cb2ae41d95f8a461ce3
+8b37bfc7128adf563a7e4d904dc83326
+916304f7bcd35d733d924fad3d8587cc
+4ac82df3273d8ae0c08460333bb57864
+d8ff15b8e8dac7c0e150df3fee1be227
+f59282e4c227c3b04a94726e169faf64
+2a5b9d63983f6dc61a82a6acb0f6df29
+9fb206571ea40dd55a2995383812dcc2
+e1abb6e5807d0a8b59e0f23a978013be
 -----END OpenVPN Static key V1-----
 """, direction: .client)!
 
@@ -120,8 +100,8 @@ aeb893d9a96d1f15519bb3c4dcb40ee3
         static func make(params: Parameters) -> OpenVPN.ProviderConfiguration {
             var builder = OpenVPN.ConfigurationBuilder()
             builder.ca = ca
-            builder.cipher = .aes256cbc
-            builder.digest = .sha512
+            builder.cipher = .aes256gcm
+            builder.digest = .sha256
             builder.compressionFraming = .compLZO
             builder.renegotiatesAfter = nil
             builder.remotes = [Endpoint(params.hostname, EndpointProtocol(params.socketType, params.port))]
